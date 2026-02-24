@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Recomendaciones de películas de alta calidad de los últimos 20 años - Blog de Cine de Álvaro López Acebo">
+    <title>Recomendaciones - Blog de Cine - Álvaro López Acebo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, Helvetica, sans-serif; line-height: 1.6; color: #333; background: #f8f8f8; }
+        .contenedor { max-width: 1200px; margin: 0 auto; background: white; box-shadow: 0 0 15px rgba(0,0,0,0.1); min-height: 100vh; display: flex; flex-direction: column; }
+        
+        /* Header y logo */
+        .header-cine { position: relative; height: 300px; background-image: url('Imagenes/header-cine-fondo.jpg'); background-size: cover; background-position: center; }
+        .header-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.55); display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center; }
+        .header-cine h1 { font-family: 'Cinzel', serif; font-size: 4.2rem; color: #001f3f; text-shadow: 4px 4px 10px black; margin-bottom: 0.4rem; }
+        .datos-autor { font-size: 1.4rem; font-weight: 300; }
+        .logo-link { position: absolute; top: 20px; right: 30px; z-index: 10; }
+        .logo { width: 80px; height: auto; transition: transform 0.3s; filter: brightness(1.1); }
+        .logo:hover { transform: scale(1.1); }
+        
+        nav { background: #001f3f; padding: 1.1rem; }
+        nav ul { list-style: none; display: flex; justify-content: center; gap: 2.5rem; flex-wrap: wrap; margin: 0; }
+        nav a { color: white; text-decoration: none; font-weight: bold; font-size: 1.1rem; transition: color 0.3s; }
+        nav a:hover, nav a.activo { color: #ffcc00; }
+        
+        main { padding: 2.5rem 3rem; flex-grow: 1; }
+        h2 { color: #001f3f; margin: 2rem 0 1.2rem; font-family: 'Playfair Display', serif; font-size: 2.4rem; text-align: center; }
+        .intro { max-width: 900px; margin: 0 auto 2.5rem; font-size: 1.2rem; text-align: center; }
+        
+        /* Grid de películas */
+        .peliculas-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 2rem; 
+            margin: 2rem 0; 
+        }
+        
+        .pelicula { 
+            border-radius: 10px; 
+            overflow: hidden; 
+            box-shadow: 0 6px 15px rgba(0,0,0,0.12); 
+            transition: transform 0.3s; 
+        }
+        .pelicula:hover { transform: translateY(-8px); }
+        
+        .pelicula-info { 
+            padding: 1.8rem; 
+            color: #fff; 
+        }
+        .pelicula h3 { 
+            font-size: 1.7rem; 
+            margin-bottom: 1rem; 
+        }
+        .pelicula p { 
+            font-size: 1.1rem; 
+            opacity: 0.95; 
+        }
+        
+        /* Colores representativos por película */
+        .parasitos { background: linear-gradient(135deg, #0d4d2e, #1a7c4e); } /* Verde oscuro - dinero y corrupción */
+        .dune { background: linear-gradient(135deg, #b8860b, #d4a017); } /* Dorado arena - desierto épico */
+        .inception { background: linear-gradient(135deg, #0a1d37, #1c3d5e); } /* Azul noche - sueños y laberintos */
+        .madmax { background: linear-gradient(135deg, #8b0000, #b22222); } /* Rojo fuego - caos post-apocalíptico */
+        .everything { background: linear-gradient(135deg, #4b0082, #8a2be2); } /* Morado multiversal - caos creativo */
+        .oppenheimer { background: linear-gradient(135deg, #2f2f2f, #4d4d4d); } /* Gris atómico - seriedad histórica */
+        .interstellar { background: linear-gradient(135deg, #000033, #0a1a5e); } /* Azul cósmico - espacio infinito */
+        
+        footer { background: #001f3f; color: white; text-align: center; padding: 1.6rem; margin-top: auto; font-size: 0.95rem; }
+        
+        @media (max-width: 768px) {
+            main { padding: 1.5rem; }
+            .peliculas-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="contenedor">
+
+    <header class="header-cine">
+        <a href="index.html" class="logo-link">
+            <img src="https://thumbs.dreamstime.com/b/simple-black-white-icon-depicting-classic-photographic-camera-421194595.jpg" 
+                 alt="Logo Blog de Cine - Cámara" 
+                 class="logo">
+        </a>
+        <div class="header-overlay">
+            <h1>Cine en estado puro</h1>
+            <p class="datos-autor">Álvaro López Acebo · Blog personal de cine · Curso 2025-2026</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="clasicos.html">Clásicos imprescindibles</a></li>
+            <li><a href="recomendaciones.html" class="activo">Recomendaciones</a></li>
+            <li><a href="generos.html">Por géneros</a></li>
+            <li><a href="curiosidades.html">Curiosidades</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Mis recomendaciones de películas de alta calidad (2006-2026)</h2>
+        <p class="intro">Aquí tienes mis recomendaciones favoritas de los últimos 20 años: obras maestras modernas con dirección excepcional, actuaciones inolvidables y temas profundos. Cada una con su color representativo y el motivo por el que las considero imprescindibles.</p>
+
+        <div class="peliculas-grid">
+
+            <div class="pelicula parasitos">
+                <div class="pelicula-info">
+                    <h3>Parásitos (2019) – Bong Joon-ho</h3>
+                    <p>Una sátira maestra sobre desigualdad social que mezcla comedia negra, thriller y drama. Ganó 4 Oscars (incluyendo Mejor Película). La recomiendo por su guion brillante, giros impredecibles y crítica social que sigue vigente en 2026.</p>
+                </div>
+            </div>
+
+            <div class="pelicula dune">
+                <div class="pelicula-info">
+                    <h3>Dune: Parte Dos (2024) – Denis Villeneuve</h3>
+                    <p>Épica de ciencia ficción visualmente espectacular con temas de poder, ecología y destino. La recomiendo por su inmersión total, efectos impresionantes y por ser una de las mejores adaptaciones literarias modernas.</p>
+                </div>
+            </div>
+
+            <div class="pelicula inception">
+                <div class="pelicula-info">
+                    <h3>Inception (2010) – Christopher Nolan</h3>
+                    <p>Thriller de sueños dentro de sueños con acción cerebral y efectos innovadores. La recomiendo por su originalidad, montaje perfecto y por invitar a debates eternos sobre realidad y subconsciente.</p>
+                </div>
+            </div>
+
+            <div class="pelicula madmax">
+                <div class="pelicula-info">
+                    <h3>Mad Max: Fury Road (2015) – George Miller</h3>
+                    <p>Acción post-apocalíptica sin pausa, con empoderamiento femenino y efectos prácticos brutales. La recomiendo por su energía salvaje y por ser un referente del cine de acción moderno.</p>
+                </div>
+            </div>
+
+            <div class="pelicula everything">
+                <div class="pelicula-info">
+                    <h3>Everything Everywhere All at Once (2022) – Daniels</h3>
+                    <p>Multiversal loca y emotiva con acción, comedia y drama familiar. Ganó 7 Oscars. La recomiendo por su creatividad infinita y por tocar temas profundos de identidad y amor familiar.</p>
+                </div>
+            </div>
+
+            <div class="pelicula oppenheimer">
+                <div class="pelicula-info">
+                    <h3>Oppenheimer (2023) – Christopher Nolan</h3>
+                    <p>Biopic histórico intensa sobre la bomba atómica y dilemas éticos. La recomiendo por su narrativa no lineal, actuaciones soberbias y por ser una lección de historia filmada con maestría.</p>
+                </div>
+            </div>
+
+            <div class="pelicula interstellar">
+                <div class="pelicula-info">
+                    <h3>Interstellar (2014) – Christopher Nolan</h3>
+                    <p>Epopeya espacial sobre supervivencia, tiempo y amor humano. La recomiendo por su base científica real, visuales espectaculares y emociones profundas que perduran.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <p class="intro" style="margin-top: 3rem;">Estas son algunas de las mejores películas del siglo XXI hasta ahora. ¿Cuál has visto o cuál te apetece ver primero? ¡Comparte en los comentarios!</p>
+    </main>
+
+    <footer>
+        <p>Blog de Cine • Creado por Álvaro López Acebo • Entregado: 17 de febrero de 2026</p>
+    </footer>
+
+</div>
+</body>
+</html>

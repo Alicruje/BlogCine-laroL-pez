@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog personal de cine: clásicos, recomendaciones, géneros y curiosidades - Álvaro López Acebo">
+    <title>Blog de Cine - Álvaro López Acebo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, Helvetica, sans-serif; line-height: 1.6; color: #333; background: #f8f8f8; }
+    .contenedor { max-width: 1200px; margin: 0 auto; background: white; box-shadow: 0 0 15px rgba(0,0,0,0.1); min-height: 100vh; display: flex; flex-direction: column; }
+    
+    /* Header y logo */
+    .header-cine { position: relative; height: 300px; background-image: url('Imagenes/header-cine-fondo.jpg'); background-size: cover; background-position: center; }
+    .header-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.55); display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center; }
+    .header-cine h1 { font-family: 'Cinzel', serif; font-size: 4.2rem; color: #001f3f; text-shadow: 4px 4px 10px black; margin-bottom: 0.4rem; }
+    .datos-autor { font-size: 1.4rem; font-weight: 300; }
+    .logo-link { position: absolute; top: 20px; right: 30px; z-index: 10; }
+    .logo { width: 80px; height: auto; transition: transform 0.3s; filter: brightness(1.1); }
+    .logo:hover { transform: scale(1.1); }
+    
+    nav { background: #001f3f; padding: 1.1rem; }
+    nav ul { list-style: none; display: flex; justify-content: center; gap: 2.5rem; flex-wrap: wrap; margin: 0; }
+    nav a { color: white; text-decoration: none; font-weight: bold; font-size: 1.1rem; transition: color 0.3s; }
+    nav a:hover, nav a.activo { color: #ffcc00; }
+    
+    main { padding: 2.5rem 3rem; flex-grow: 1; }
+    h2 { color: #001f3f; margin: 2rem 0 1.2rem; font-family: 'Playfair Display', serif; font-size: 2.4rem; }
+    h3 { color: #001f3f; font-size: 1.8rem; margin: 2rem 0 1rem; }
+    
+    /* Control global de imágenes para que no se agranden */
+    img:not(.logo) { 
+        max-width: 100%; 
+        height: auto; 
+        display: block; 
+    }
+    
+    /* Contenedores de imágenes (clasicos, recomendaciones, generos, etc.) */
+    .pelicula img, .genero-imagen img, .escena img {
+        max-width: 220px;          /* tamaño fijo principal */
+        max-height: 320px;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        border: 1px solid #eee;
+        transition: transform 0.3s;
+    }
+    
+    .pelicula img:hover, .genero-imagen img:hover, .escena img:hover {
+        transform: scale(1.05);
+    }
+    
+    /* Ajustes para generos */
+    .genero-imagenes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        margin-top: 1.2rem;
+        justify-content: flex-start;
+    }
+    
+    .genero-imagen {
+        flex: 0 0 220px;
+        max-width: 220px;
+        text-align: center;
+    }
+    
+    footer { background: #001f3f; color: white; text-align: center; padding: 1.6rem; margin-top: auto; font-size: 0.95rem; }
+    
+    @media (max-width: 768px) {
+        main { padding: 1.5rem; }
+        .pelicula img, .genero-imagen img, .escena img {
+            max-width: 180px;
+            max-height: 260px;
+        }
+        .genero-imagen {
+            flex: 0 0 180px;
+            max-width: 180px;
+        }
+        .logo { width: 70px; }
+    }
+</style>
+</head>
+<body>
+
+<div class="contenedor">
+
+    <header class="header-cine">
+    <a href="index.html" class="logo-link">
+        <img src="https://thumbs.dreamstime.com/b/simple-black-white-icon-depicting-classic-photographic-camera-421194595.jpg" 
+             alt="Logo Blog de Cine - Cámara" 
+             class="logo">
+    </a>
+    <div class="header-overlay">
+        <h1>Cine en estado puro</h1>
+        <p class="datos-autor">Álvaro López Acebo · Blog personal de cine · Curso 2025-2026</p>
+    </div>
+</header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="clasicos.html">Clásicos imprescindibles</a></li>
+            <li><a href="recomendaciones.html">Recomendaciones</a></li>
+            <li><a href="generos.html" class="activo">Por géneros</a></li>
+            <li><a href="curiosidades.html">Curiosidades</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Exploración por géneros cinematográficos</h2>
+        <p>Aquí analizo algunos de los géneros más icónicos del cine, desde su creación hasta películas clave, con contexto histórico, directores pioneros y escenas clásicas ilustradas con imágenes.</p>
+
+        <div class="genero">
+            <h3>Western</h3>
+            <p>El género Western se creó a principios del siglo XX, con la película fundacional "The Great Train Robbery" (1903), dirigida por Edwin S. Porter. En el contexto de la expansión estadounidense hacia el Oeste, reflejaba mitos de frontera, vaqueros y leyendas del Viejo Oeste durante la era del cine mudo.</p>
+            <img src="https://images.photowall.com/products/59921/good-bad-and-the-ugly.jpg?h=699&q=85" alt="Poster de The Good, the Bad and the Ugly">
+            <img src="https://i.ytimg.com/vi/5PgAKzmWmuk/sddefault.jpg" alt="Escena clásica de standoff en The Good, the Bad and the Ugly">
+            <h4>Películas importantes</h4>
+            <ul>
+                <li>Stagecoach (1939) - John Ford</li>
+                <li>The Searchers (1956) - John Ford</li>
+                <li>The Good, the Bad and the Ugly (1966) - Sergio Leone</li>
+                <li>Unforgiven (1992) - Clint Eastwood</li>
+                <li>No Country for Old Men (2007) - Joel y Ethan Coen</li>
+            </ul>
+        </div>
+
+        <div class="genero">
+            <h3>Terror</h3>
+            <p>El terror surgió en los años 1910-1920 con el expresionismo alemán, y una película clave fue "The Cabinet of Dr. Caligari" (1920), dirigida por Robert Wiene. En el contexto post-Primera Guerra Mundial, exploraba miedos psicológicos y distorsiones visuales para evocar horror.</p>
+            <img src="https://m.media-amazon.com/images/I/613kCG1TimL.jpg" alt="Poster de Psycho">
+            <img src="https://res.cloudinary.com/aenetworks/image/upload/c_fill,w_1200,h_630,g_auto/dpr_auto/f_auto/q_auto:eco/v1/psychos-shower-scene-how-hitchcock-upped-the-terror-and-fooled-the-censorss-featured-photo" alt="Escena clásica de la ducha en Psycho">
+            <h4>Películas importantes</h4>
+            <ul>
+                <li>Nosferatu (1922) - F.W. Murnau</li>
+                <li>Psycho (1960) - Alfred Hitchcock</li>
+                <li>The Exorcist (1973) - William Friedkin</li>
+                <li>The Shining (1980) - Stanley Kubrick</li>
+                <li>Get Out (2017) - Jordan Peele</li>
+            </ul>
+        </div>
+
+        <div class="genero">
+            <h3>Ciencia Ficción</h3>
+            <p>La ciencia ficción se inició con "A Trip to the Moon" (1902), dirigida por Georges Méliès. En el contexto de la Revolución Industrial y avances científicos, imaginaba viajes espaciales y futuros tecnológicos con efectos especiales pioneros.</p>
+            <img src="https://m.media-amazon.com/images/I/61n40g7-3mL.jpg" alt="Poster de 2001: A Space Odyssey">
+            <img src="https://nofilmschool.com/media-library/slit-scan.jpg?id=34090260&width=980" alt="Escena clásica de la secuencia Star Gate en 2001: A Space Odyssey">
+            <h4>Películas importantes</h4>
+            <ul>
+                <li>Metropolis (1927) - Fritz Lang</li>
+                <li>2001: A Space Odyssey (1968) - Stanley Kubrick</li>
+                <li>Blade Runner (1982) - Ridley Scott</li>
+                <li>The Matrix (1999) - Wachowski</li>
+                <li>Inception (2010) - Christopher Nolan</li>
+            </ul>
+        </div>
+
+        <div class="genero">
+            <h3>Romance</h3>
+            <p>El romance ha estado presente desde el cine mudo, pero un hito fue "Casablanca" (1942), dirigida por Michael Curtiz. En el contexto de la Segunda Guerra Mundial, capturaba amores imposibles y sacrificios en tiempos de conflicto.</p>
+            <img src="https://media.posterlounge.com/img/products/720000/715288/715288_poster.jpg" alt="Poster de Casablanca">
+            <img src="https://cdn.mos.cms.futurecdn.net/xHWAkpXUcgACLh2ReEGzUV.jpg" alt="Escena clásica de despedida en el aeropuerto en Casablanca">
+            <h4>Películas importantes</h4>
+            <ul>
+                <li>It Happened One Night (1934) - Frank Capra</li>
+                <li>Casablanca (1942) - Michael Curtiz</li>
+                <li>Roman Holiday (1953) - William Wyler</li>
+                <li>Titanic (1997) - James Cameron</li>
+                <li>La La Land (2016) - Damien Chazelle</li>
+            </ul>
+        </div>
+
+        <div class="genero">
+            <h3>Comedia</h3>
+            <p>La comedia surgió con el slapstick mudo en los 1910s, con Charlie Chaplin, pero un clásico moderno es "Some Like It Hot" (1959), dirigida por Billy Wilder. En el contexto post-Depresión y screwball, usaba humor absurdo y sátira social.</p>
+            <img src="https://m.media-amazon.com/images/I/51l5P4ZYOjL._AC_UF894,1000_QL80_.jpg" alt="Poster de Some Like It Hot">
+            <img src="https://i.ytimg.com/vi/YTuCXG5eY3c/maxresdefault.jpg" alt="Escena clásica del vestido de Marilyn Monroe en Some Like It Hot">
+            <h4>Películas importantes</h4>
+            <ul>
+                <li>The General (1926) - Buster Keaton</li>
+                <li>Some Like It Hot (1959) - Billy Wilder</li>
+                <li>Dr. Strangelove (1964) - Stanley Kubrick</li>
+                <li>The Big Lebowski (1998) - Joel y Ethan Coen</li>
+                <li>Knives Out (2019) - Rian Johnson</li>
+            </ul>
+        </div>
+
+        <p>¿Cuál es tu género favorito? ¡Explora estos y descubre más joyas del cine!</p>
+    </main>
+
+    <footer>
+        <p>Blog de Cine • Creado por Álvaro López Acebo • Entregado: 17 de febrero de 2026</p>
+    </footer>
+
+</div>
+</body>
+</html>

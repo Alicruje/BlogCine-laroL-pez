@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Curiosidades del cine: historia, evolución técnica, directores influyentes y línea del tiempo - Blog de Cine de Álvaro López Acebo">
+    <title>Curiosidades del Cine - Blog de Cine - Álvaro López Acebo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, Helvetica, sans-serif; line-height: 1.6; color: #333; background: #f8f8f8; }
+    .contenedor { max-width: 1200px; margin: 0 auto; background: white; box-shadow: 0 0 15px rgba(0,0,0,0.1); min-height: 100vh; display: flex; flex-direction: column; }
+    
+    /* Header y logo */
+    .header-cine { position: relative; height: 300px; background-image: url('Imagenes/header-cine-fondo.jpg'); background-size: cover; background-position: center; }
+    .header-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.55); display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center; }
+    .header-cine h1 { font-family: 'Cinzel', serif; font-size: 4.2rem; color: #001f3f; text-shadow: 4px 4px 10px black; margin-bottom: 0.4rem; }
+    .datos-autor { font-size: 1.4rem; font-weight: 300; }
+    .logo-link { position: absolute; top: 20px; right: 30px; z-index: 10; }
+    .logo { width: 80px; height: auto; transition: transform 0.3s; filter: brightness(1.1); }
+    .logo:hover { transform: scale(1.1); }
+    
+    nav { background: #001f3f; padding: 1.1rem; }
+    nav ul { list-style: none; display: flex; justify-content: center; gap: 2.5rem; flex-wrap: wrap; margin: 0; }
+    nav a { color: white; text-decoration: none; font-weight: bold; font-size: 1.1rem; transition: color 0.3s; }
+    nav a:hover, nav a.activo { color: #ffcc00; }
+    
+    main { padding: 2.5rem 3rem; flex-grow: 1; }
+    h2 { color: #001f3f; margin: 2rem 0 1.2rem; font-family: 'Playfair Display', serif; font-size: 2.4rem; }
+    h3 { color: #001f3f; font-size: 1.8rem; margin: 2rem 0 1rem; }
+    
+    /* Control global de imágenes para que no se agranden */
+    img:not(.logo) { 
+        max-width: 100%; 
+        height: auto; 
+        display: block; 
+    }
+    
+    /* Contenedores de imágenes (clasicos, recomendaciones, generos, etc.) */
+    .pelicula img, .genero-imagen img, .escena img {
+        max-width: 220px;          /* tamaño fijo principal */
+        max-height: 320px;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        border: 1px solid #eee;
+        transition: transform 0.3s;
+    }
+    
+    .pelicula img:hover, .genero-imagen img:hover, .escena img:hover {
+        transform: scale(1.05);
+    }
+    
+    /* Ajustes para generos */
+    .genero-imagenes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        margin-top: 1.2rem;
+        justify-content: flex-start;
+    }
+    
+    .genero-imagen {
+        flex: 0 0 220px;
+        max-width: 220px;
+        text-align: center;
+    }
+    
+    footer { background: #001f3f; color: white; text-align: center; padding: 1.6rem; margin-top: auto; font-size: 0.95rem; }
+    
+    @media (max-width: 768px) {
+        main { padding: 1.5rem; }
+        .pelicula img, .genero-imagen img, .escena img {
+            max-width: 180px;
+            max-height: 260px;
+        }
+        .genero-imagen {
+            flex: 0 0 180px;
+            max-width: 180px;
+        }
+        .logo { width: 70px; }
+    }
+</style>
+</head>
+<body>
+
+<div class="contenedor">
+
+   <header class="header-cine">
+    <a href="index.html" class="logo-link">
+        <img src="https://thumbs.dreamstime.com/b/simple-black-white-icon-depicting-classic-photographic-camera-421194595.jpg" 
+             alt="Logo Blog de Cine - Cámara" 
+             class="logo">
+    </a>
+    <div class="header-overlay">
+        <h1>Cine en estado puro</h1>
+        <p class="datos-autor">Álvaro López Acebo · Blog personal de cine · Curso 2025-2026</p>
+    </div>
+</header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="clasicos.html">Clásicos imprescindibles</a></li>
+            <li><a href="recomendaciones.html">Recomendaciones</a></li>
+            <li><a href="generos.html">Por géneros</a></li>
+            <li><a href="curiosidades.html" class="activo">Curiosidades</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Curiosidades del cine: historia, evolución y secretos</h2>
+        <p>Aquí recopilo algunos datos fascinantes sobre la historia del cine, innovaciones técnicas, directores que cambiaron las reglas del juego y cómo ha evolucionado el séptimo arte desde sus inicios hasta la era digital y del streaming en 2026.</p>
+
+        <h3>Curiosidades técnicas e históricas destacadas</h3>
+        <ul>
+            <li>La primera película proyectada públicamente (1895) duraba solo 50 segundos: <em>La salida de los obreros de la fábrica Lumière</em>. No tenía argumento, solo realidad capturada.</li>
+            <li>El primer close-up intencional se atribuye a D.W. Griffith en 1908–1910, rompiendo con el teatro al mostrar emociones faciales detalladas.</li>
+            <li>La primera película sonora sincronizada comercial fue <em>The Jazz Singer</em> (1927), pero solo tenía canciones y diálogos parciales; el cine mudo murió en pocos años.</li>
+            <li>Alfred Hitchcock filmó la escena de la ducha en <em>Psicosis</em> (1960) en blanco y negro para disimular la sangre (en realidad era chocolate) y ahorrar presupuesto.</li>
+            <li>Stanley Kubrick destruyó casi todos los decorados y modelos de <em>2001: Una odisea del espacio</em> (1968) para que nadie los reutilizara en otras películas.</li>
+            <li>La primera película en usar CGI extensivo fue <em>Tron</em> (1982), pero el gran salto fue <em>Jurassic Park</em> (1993), que combinó animatrónicos con CGI realista.</li>
+            <li>En 2009, <em>Avatar</em> revivió el 3D moderno con cámaras especiales; en 2025–2026, el 3D inmersivo y la realidad mixta (XR) están volviendo a ganar terreno en salas premium.</li>
+        </ul>
+
+        <h3>Directores que cambiaron el cine para siempre</h3>
+        <ul>
+            <li><strong>Orson Welles</strong> (Ciudadano Kane, 1941): A los 25 años introdujo profundidad de campo, narración no lineal y techos visibles en sets. Influyó en casi todo el cine posterior.</li>
+            <li><strong>Alfred Hitchcock</strong>: Maestro del suspense; popularizó el “MacGuffin” (objeto que impulsa la trama pero no importa) y el giro psicológico en el terror.</li>
+            <li><strong>Stanley Kubrick</strong>: Perfeccionista obsesivo; avanzó en efectos especiales prácticos y narrativas filosóficas. Casi nunca usó CGI.</li>
+            <li><strong>Francis Ford Coppola</strong>: Con El Padrino (1972) humanizó la mafia y dio paso al “New Hollywood” de directores-autores en los 70.</li>
+            <li><strong>Steven Spielberg & George Lucas</strong>: Crearon el blockbuster moderno con Tiburón (1975) y Star Wars (1977), cambiando el modelo económico del cine.</li>
+            <li><strong>Christopher Nolan</strong>: Defensor del celuloide en la era digital; popularizó narrativas complejas con montaje no lineal y conceptos científicos reales.</li>
+        </ul>
+
+        <h3>Línea del tiempo visual de la historia del cine (1895–2026)</h3>
+
+        <div class="timeline">
+            <div class="timeline-event left">
+                <div class="timeline-content">
+                    <h4>1895</h4>
+                    <p>Hermanos Lumière presentan el Cinematógrafo: primeras proyecciones públicas pagadas en París.</p>
+                </div>
+            </div>
+
+            <div class="timeline-event right">
+                <div class="timeline-content">
+                    <h4>1903</h4>
+                    <p><em>The Great Train Robbery</em> – primer western y uso temprano de edición narrativa.</p>
+                </div>
+            </div>
+
+            <div class="timeline-event left">
+                <div class="timeline-content">
+                    <h4>1915–1920s</h4>
+                    <p>Época dorada del cine mudo: Griffith, Chaplin, Keaton. Nace Hollywood como industria.</p>
+                </div>
+            </div>
+
+            <div class="timeline-event right">
+                <div class="timeline-content">
+                    <h4>1927</h4>
+                    <p><em>The Jazz Singer</em> – nacimiento del cine sonoro (talkies).</p>
+                </div>
+            </div>
+
+            <div class="timeline-event left">
+                <div class="timeline-content">
+                    <h4>1939</h4>
+                    <p>Auge del Technicolor: <em>Lo que el viento se llevó</em> y <em>El mago de Oz</em>.</p>
+                </div>
+            </div>
+
+            <div class="timeline-event right">
+                <div class="timeline-content">
+                    <h4>1941</h4>
+                    <p><em>Ciudadano Kane</em> – revolución técnica y narrativa.</p>
+                </div>
+            </div>
+
+            <div class="timeline-event left">
+                <div class="timeline-content">
+                    <h4>1960</h4>
+                    <p><em>Psicosis</em> – nacimiento del slasher moderno y terror psicológico.</p>
+                </div>
+            </div>
+
+            <div class="timeline-event right">
+                <div class="timeline-content">
+                    <h4>1968</h4>
+                    <p><em>2001: Una odisea del espacio</em> – efectos visuales prácticos revolucionarios.</p>
+                </div>
+            </div>
+
+            <div class="timeline-event left">
+                <div class="timeline-content">
+                    <h4>1975–1977</h4>
+                    <p><em>Tiburón</em> y <em>Star Wars</em> – era del blockbuster.</p>
+                </div>
+            </div>
+
+            <div class="timeline-event right">
+                <div class="timeline-content">
+                    <h4>1993–1999</h4>
+                    <p>CGI masivo: <em>Jurassic Park</em>, <em>Titanic</em>, <em>Matrix</em>.</p>
+                </div>
+            </div>
+
+            <div class="timeline-event left">
+                <div class="timeline-content">
+                    <h4>2009</h4>
+                    <p><em>Avatar</em> – renacimiento del 3D y captura de movimiento avanzada.</p>
+                </div>
+            </div>
+
+            <div class="timeline-event right">
+                <div class="timeline-content">
+                    <h4>2010s–2020s</h4>
+                    <p>Streaming (Netflix, Disney+), superhéroes dominantes, transición total al digital.</p>
+                </div>
+            </div>
+
+            <div class="timeline-event left">
+                <div class="timeline-content">
+                    <h4>2025–2026</h4>
+                    <p>IA en preproducción y postproducción, realidad mixta en salas, regreso parcial al celuloide en cine de autor.</p>
+                </div>
+            </div>
+        </div>
+
+        <p>¿Cuál de estas curiosidades te ha sorprendido más? ¿O conoces alguna otra que debería añadir?</p>
+    </main>
+
+    <footer>
+        <p>Blog de Cine • Creado por Álvaro López Acebo • Entregado: 17 de febrero de 2026</p>
+    </footer>
+
+</div>
+</body>
+</html>
